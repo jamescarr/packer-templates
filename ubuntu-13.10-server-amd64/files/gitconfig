@@ -1,0 +1,69 @@
+[user]
+  name = sysadmin
+  email = sysadmin@company.com
+[core]
+  excludesfile = ~/.gitignore_global
+
+[push]
+  default = simple
+
+[alias]
+  #
+  #Staging and unstaging aliases
+  #
+  unstage = reset HEAD
+
+  merge = merge --no-ff
+
+  #Add colors to the regular diff; the extras are just for the typos I always make
+  cdiff = diff --color-words
+  cid = diff --color-words
+  cidff = diff --color-words	
+  cdif = diff --color-words
+
+  #diffs of staged changes (extra aliases are to catch typos)
+  sdiff = diff --color-words --staged
+
+
+  #diff of staged and unstaged changes
+  diffall = diff HEAD --color-words
+
+  #log with tons of colors and author/date info; dlog for deluxe log
+  dlog = log --color=always --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an <%ae> on %ad)%Creset' --date=short --decorate
+
+  #graphical log with tons of colors
+  glog = log --graph --all --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n'' %C(white)%s%C(reset) %C(bold white) %an%C(reset)' --date=relative
+
+  #log with patch output and patch stats
+  plog = log --patch-with-stat --decorate
+
+  #log with graph and patch output
+  gplog = log --patch-with-stat --graph --color=always --pretty='format:%Cgreen%h%Creset %s%Cred%d%Creset %C(black bold)(by %an <%ae> on %ad)%Creset' --date=short --decorate 
+
+  #git status
+  stat = status
+
+[color]
+  ui = true
+  branch = true
+  diff = true
+  status = true
+
+[color "branch"]
+  current = yellow reverse
+  local = yellow
+  remote = green
+
+[color "diff"]
+  meta = blue black bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+
+[pull]
+  ff = true

@@ -1,0 +1,15 @@
+#vagrant user .bash_profile and .bash_rc
+
+#Source /etc/profile
+source /etc/profile
+
+#gives me a colored prompt
+export PS1='\[\033[0;33m\]\u\[\033[0m\]@\[\033[0;32m\]\h\[\033[0m\]: \[\033[0;34m\]\W\[\033[0m\] > '
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+#alias for ls turning into ls -lga
+alias ls="ls -lh --color=auto"
+
+#alias for tmux re-attachment to sessions
+alias tmuxa="tmux attach-session"
