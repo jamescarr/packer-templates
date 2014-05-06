@@ -39,7 +39,7 @@ sudo rm -rf /usr/share/locale/{af,am,ar,as,ast,az,bal,be,bg,bn,bn_IN,br,bs,byn,c
 echo "pre-up sleep 2" >> /etc/network/interfaces
 
 #zero out disk space. Replacing free space with 0s makes the drive more easily compressed
-ECHO "Zeroing out disk..."
+echo "Zeroing out disk..."
 cat /dev/zero > zero.fill;sync;sleep 1;sync;rm -f zero.fill
 
 dd if=/dev/zero of=/EMPTY bs=1M

@@ -19,3 +19,12 @@ cp /tmp/gitignore_global /home/vagrant/.gitignore_global
 
 cp /tmp/gitconfig /root/.gitconfig
 cp /tmp/gitignore_global /root/.gitignore_global
+
+# and... let's not do host checking on github.com
+mkdir -p /root/.ssh
+
+echo """
+Host github.com
+    StrictHostKeyChecking no
+    """ >> /home/vagrant/.ssh/config >> /root/.ssh/config
+

@@ -23,7 +23,7 @@ rm -rf /tmp/zsh-5.0.5/ /tmp/zsh-5.0.5.tar.gz
 ##############################
 
 #Add this variable so keyboard stuff isn't wonky
-echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /home/vagrant/.zshenv
+echo "DEBIAN_PREVENT_KEYBOARD_CHANGES=yes" > /home/vagrant/.zshenv 
 
 #install oh-my-zsh first
 cd /home/vagrant

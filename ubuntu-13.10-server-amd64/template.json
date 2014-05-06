@@ -39,6 +39,11 @@
     },
     {
       "type": "file",
+      "source": "files/motd",
+      "destination": "/tmp/motd"
+    },
+    {
+      "type": "file",
       "source": "files/gitignore_global",
       "destination": "/tmp/gitignore_global"
     },
